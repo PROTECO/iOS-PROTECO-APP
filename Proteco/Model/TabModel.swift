@@ -1,20 +1,25 @@
-//
-//  TabModel.swift
-//  Proteco
-//
-//  Created by ReusHarper on 20/03/23.
-//
-
+// Dependencies
 import SwiftUI
 
-struct TabModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+struct TabItem: Identifiable {
+    var id   = UUID()
+    var text : String
+    var icon : String
+    var tab  : TabModel
 }
 
-struct TabModel_Previews: PreviewProvider {
-    static var previews: some View {
-        TabModel()
-    }
+var tabItems = [
+    TabItem(text: "Asesorias", icon: "calendar.circle", tab: .advices),
+    TabItem(text: "Cursos", icon: "rectangle.stack.badge.person.crop", tab: .courses),
+    TabItem(text: "Inicio", icon: "house", tab: .home),
+    TabItem(text: "Talleres", icon: "text.book.closed", tab: .workshops),
+    TabItem(text: "Cuenta", icon: "person.circle", tab: .account),
+]
+
+enum TabModel: String, CaseIterable {
+    case advices    = "calendar.circle"
+    case courses    = "rectangle.stack.badge.person.crop"
+    case home       = "house"
+    case workshops  = "text.book.closed"
+    case account    = "person.circle"
 }

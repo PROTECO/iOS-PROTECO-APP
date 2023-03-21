@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A207BF2029C9607800429371 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207BF1F29C9607800429371 /* ShadowView.swift */; };
 		A2B267FB29C4E48500349F37 /* ProtecoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B267FA29C4E48500349F37 /* ProtecoApp.swift */; };
 		A2B267FD29C4E48500349F37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B267FC29C4E48500349F37 /* ContentView.swift */; };
 		A2B267FF29C4E48800349F37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B267FE29C4E48800349F37 /* Assets.xcassets */; };
@@ -17,9 +18,12 @@
 		A2C8701029C803DC00407A48 /* Assistant-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2C8700D29C803DA00407A48 /* Assistant-SemiBold.ttf */; };
 		A2C8701429C8046500407A48 /* Assistant-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2C8701329C8046500407A48 /* Assistant-Light.ttf */; };
 		A2C8701629C8048900407A48 /* Assistant-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2C8701529C8048900407A48 /* Assistant-Regular.ttf */; };
+		A2D7267B29C9165D0076A25D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7267A29C9165C0076A25D /* MainView.swift */; };
+		A2D7267D29C916FA0076A25D /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7267C29C916FA0076A25D /* TabModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A207BF1F29C9607800429371 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		A2B267F729C4E48500349F37 /* Proteco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proteco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B267FA29C4E48500349F37 /* ProtecoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtecoApp.swift; sourceTree = "<group>"; };
 		A2B267FC29C4E48500349F37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,8 @@
 		A2C8701329C8046500407A48 /* Assistant-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Assistant-Light.ttf"; sourceTree = "<group>"; };
 		A2C8701529C8048900407A48 /* Assistant-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Assistant-Regular.ttf"; sourceTree = "<group>"; };
 		A2C8701729C8063D00407A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A2D7267A29C9165C0076A25D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A2D7267C29C916FA0076A25D /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			children = (
 				A2B267FA29C4E48500349F37 /* ProtecoApp.swift */,
 				A2B267FC29C4E48500349F37 /* ContentView.swift */,
+				A2D7267A29C9165C0076A25D /* MainView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 		A2C86FFB29C76B3C00407A48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A207BF1F29C9607800429371 /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 		A2C86FFC29C76B4300407A48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2D7267C29C916FA0076A25D /* TabModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,7 +213,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2B267FD29C4E48500349F37 /* ContentView.swift in Sources */,
+				A2D7267D29C916FA0076A25D /* TabModel.swift in Sources */,
+				A2D7267B29C9165D0076A25D /* MainView.swift in Sources */,
 				A2B267FB29C4E48500349F37 /* ProtecoApp.swift in Sources */,
+				A207BF2029C9607800429371 /* ShadowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
