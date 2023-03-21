@@ -81,7 +81,7 @@ struct MainView: View {
 // MARK: - PREVIEW
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(selectedTab: .home)
+        MainView()
             .previewDevice("iPhone 11")
     }
 }

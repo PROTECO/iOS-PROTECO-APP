@@ -8,7 +8,7 @@ struct ProtecoApp: App {
     // MARK: - BODY
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     } //: BODY
 }
