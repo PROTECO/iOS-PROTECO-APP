@@ -6,7 +6,7 @@ struct MainView: View {
     @State var selectedTab: TabModel = .home
     @State var color: Color = Color("color_icons")
     
-    private var shadow = ShadowView()
+    private var shadow = ShadowView(isShadow: true)
     private var fillImage: String {
         selectedTab.rawValue + ".fill"
     }
