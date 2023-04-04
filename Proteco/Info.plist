@@ -2,6 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MontserratAlternates-Bold.ttf</string>
+		<string>Assistant-Light.ttf</string>
+		<string>Assistant-Regular.ttf</string>
+		<string>Assistant-SemiBold.ttf</string>
+		<string>MontserratAlternates-Regular.ttf</string>
+		<string>MontserratAlternates-Medium.ttf</string>
+		<string>MontserratAlternates-SemiBold.ttf</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
@@ -11,14 +21,5 @@
 		<key>UILaunchScreen</key>
 		<dict/>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Assistant-Light.ttf</string>
-		<string>Assistant-Regular.ttf</string>
-		<string>Assistant-SemiBold.ttf</string>
-		<string>MontserratAlternates-Regular.ttf</string>
-		<string>MontserratAlternates-Medium.ttf</string>
-		<string>MontserratAlternates-SemiBold.ttf</string>
-	</array>
 </dict>
 </plist>

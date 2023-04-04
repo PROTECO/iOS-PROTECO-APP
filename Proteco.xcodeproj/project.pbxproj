@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A207BF2029C9607800429371 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A207BF1F29C9607800429371 /* ShadowView.swift */; };
+		A20A631C29DB53930065CBF3 /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A631B29DB53930065CBF3 /* OnboardingData.swift */; };
+		A20A631E29DB54140065CBF3 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A631D29DB54140065CBF3 /* OnboardingModel.swift */; };
+		A20A632029DB57F30065CBF3 /* TitlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A631F29DB57F30065CBF3 /* TitlesView.swift */; };
+		A20A632229DB5C490065CBF3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A632129DB5C490065CBF3 /* OnboardingView.swift */; };
+		A20A632429DB5ED30065CBF3 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A632329DB5ED30065CBF3 /* OnboardingCardView.swift */; };
+		A20A632629DB7A9D0065CBF3 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A20A632529DB7A9C0065CBF3 /* MontserratAlternates-Bold.ttf */; };
 		A22E416329D20D4300DFFD2D /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = A22E416229D20D4300DFFD2D /* SwiftUIFontIcon */; };
 		A23FCC7D29CE130900231D5A /* CustomButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23FCC7C29CE130900231D5A /* CustomButtonsView.swift */; };
 		A2A7D32F29D36438006C61BB /* CustomButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A7D32E29D36438006C61BB /* CustomButtonModel.swift */; };
@@ -27,6 +33,12 @@
 
 /* Begin PBXFileReference section */
 		A207BF1F29C9607800429371 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		A20A631B29DB53930065CBF3 /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		A20A631D29DB54140065CBF3 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		A20A631F29DB57F30065CBF3 /* TitlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesView.swift; sourceTree = "<group>"; };
+		A20A632129DB5C490065CBF3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A20A632329DB5ED30065CBF3 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
+		A20A632529DB7A9C0065CBF3 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		A23FCC7C29CE130900231D5A /* CustomButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsView.swift; sourceTree = "<group>"; };
 		A2A7D32E29D36438006C61BB /* CustomButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonModel.swift; sourceTree = "<group>"; };
 		A2B267F729C4E48500349F37 /* Proteco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proteco.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +114,7 @@
 				A2B267FA29C4E48500349F37 /* ProtecoApp.swift */,
 				A2B267FC29C4E48500349F37 /* ContentView.swift */,
 				A2D7267A29C9165C0076A25D /* MainView.swift */,
+				A20A632129DB5C490065CBF3 /* OnboardingView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -111,6 +124,8 @@
 			children = (
 				A207BF1F29C9607800429371 /* ShadowView.swift */,
 				A23FCC7C29CE130900231D5A /* CustomButtonsView.swift */,
+				A20A631F29DB57F30065CBF3 /* TitlesView.swift */,
+				A20A632329DB5ED30065CBF3 /* OnboardingCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +135,7 @@
 			children = (
 				A2D7267C29C916FA0076A25D /* TabModel.swift */,
 				A2A7D32E29D36438006C61BB /* CustomButtonModel.swift */,
+				A20A631D29DB54140065CBF3 /* OnboardingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -127,6 +143,7 @@
 		A2C86FFD29C76B4900407A48 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A20A631B29DB53930065CBF3 /* OnboardingData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -140,6 +157,7 @@
 				A2C8700129C802AA00407A48 /* MontserratAlternates-Medium.ttf */,
 				A2C8700029C802A900407A48 /* MontserratAlternates-Regular.ttf */,
 				A2C86FFF29C802A800407A48 /* MontserratAlternates-SemiBold.ttf */,
+				A20A632529DB7A9C0065CBF3 /* MontserratAlternates-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -209,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2C8700229C802AA00407A48 /* MontserratAlternates-SemiBold.ttf in Resources */,
+				A20A632629DB7A9D0065CBF3 /* MontserratAlternates-Bold.ttf in Resources */,
 				A2B2680229C4E48800349F37 /* Preview Assets.xcassets in Resources */,
 				A2C8701629C8048900407A48 /* Assistant-Regular.ttf in Resources */,
 				A2C8700329C802AA00407A48 /* MontserratAlternates-Regular.ttf in Resources */,
@@ -229,10 +248,15 @@
 				A2B267FD29C4E48500349F37 /* ContentView.swift in Sources */,
 				A2A7D32F29D36438006C61BB /* CustomButtonModel.swift in Sources */,
 				A2D7267D29C916FA0076A25D /* TabModel.swift in Sources */,
+				A20A632429DB5ED30065CBF3 /* OnboardingCardView.swift in Sources */,
+				A20A632029DB57F30065CBF3 /* TitlesView.swift in Sources */,
 				A2D7267B29C9165D0076A25D /* MainView.swift in Sources */,
+				A20A631C29DB53930065CBF3 /* OnboardingData.swift in Sources */,
+				A20A631E29DB54140065CBF3 /* OnboardingModel.swift in Sources */,
 				A23FCC7D29CE130900231D5A /* CustomButtonsView.swift in Sources */,
 				A2B267FB29C4E48500349F37 /* ProtecoApp.swift in Sources */,
 				A207BF2029C9607800429371 /* ShadowView.swift in Sources */,
+				A20A632229DB5C490065CBF3 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,9 +391,8 @@
 				INFOPLIST_FILE = Proteco/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,9 +421,8 @@
 				INFOPLIST_FILE = Proteco/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
