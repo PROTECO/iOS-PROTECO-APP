@@ -10,13 +10,15 @@ struct TitlesView: View {
     
     // MARK: - BODY
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 5) {
             Text(title)
                 .font(.custom("MontserratAlternates-Bold" , size: 35))
+                .multilineTextAlignment(.center)
                 .foregroundColor(fgColorTitle != nil ? fgColorTitle! : Color("color_dark"))
             
             Text(description != nil ? description! : "")
                 .font(.custom("Assistant-Regular" , size: 18))
+                .multilineTextAlignment(.center)
                 .foregroundColor(fgColorDesc != nil ? fgColorDesc! : Color("color_dark"))
         } //: VSTACK
     }

@@ -1,18 +1,29 @@
-//
-//  OnboardingView.swift
-//  Proteco
-//
-//  Created by ReusHarper on 03/04/23.
-//
-
+// Dependencies
 import SwiftUI
 
 struct OnboardingView: View {
+    // MARK: - PROPERTIES
+    @AppStorage("isOnboarding") var isOnboarding : Bool?
+    
+    var onboardings : [Onboarding] = onboardingData
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+                TabView {
+                    ForEach(onboardings[0 ... onboardings.count - 1]) { item in
+                        OnboardingCardView(onboarding: item)
+                    } //: LOOP
+                } //: TAB
+            } //: ZSTACK
+            .tabViewStyle(PageTabViewStyle())
+        } //: VSTACK
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
+// MARK: - PREVIEW
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingView()

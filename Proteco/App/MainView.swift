@@ -3,8 +3,9 @@ import SwiftUI
 
 struct MainView: View {
     // MARK: - PROPERTIES
-    @State var selectedTab: TabModel = .home
-    @State var color: Color = Color("color_icons")
+    @State private var isAnimating  : Bool      = false
+    @State var selectedTab          : TabModel  = .home
+    @State var color                : Color     = Color("color_icons")
     
     private var shadow = ShadowView(isShadow: true)
     private var fillImage: String {
@@ -72,7 +73,7 @@ struct MainView: View {
             .modifier(shadow)
             .padding(.leading, 15)
             .padding(.trailing, 15)
-            .ignoresSafeArea()
+             .ignoresSafeArea()
         } //: ZSTACK
     }
 }

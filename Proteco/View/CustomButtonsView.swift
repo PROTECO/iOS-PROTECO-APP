@@ -41,6 +41,7 @@ struct CustomButtonStyle: ButtonStyle {
 // MARK: - CUSTOM BUTTON
 struct CustomButtom: View {
     // MARK: - PROPERTIES
+    var action          : (() -> Void)?
     var title           : String
     var icon            : String?
     var link            : String?
@@ -52,13 +53,18 @@ struct CustomButtom: View {
     // MARK: - BODY
     var body: some View {
         Button(action: {
-            if link != nil {
-                if (link! == "settings") {
-                    openURL(URL(string: UIApplication.openSettingsURLString)!)
+            if action == nil {
+                if link != nil {
+                    if (link! == "settings") {
+                        openURL(URL(string: UIApplication.openSettingsURLString)!)
+                    }
+                    else {
+                        openURL(URL(string: link!)!)
+                    }
                 }
-                else {
-                    openURL(URL(string: link!)!)
-                }
+            }
+            else {
+                action!()
             }
         }) {
             HStack {

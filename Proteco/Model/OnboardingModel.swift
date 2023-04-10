@@ -1,8 +1,10 @@
-//
-//  OnboardingModel.swift
-//  Proteco
-//
-//  Created by ReusHarper on 03/04/23.
-//
+// Dependencies
+import SwiftUI
 
-import Foundation
+// MARK: - FRUITS DATA MODEL:
+struct Onboarding: Identifiable {
+    var id              = UUID()
+    var image           : String
+    var bgColor         : Color
+    var description     : String
+}
