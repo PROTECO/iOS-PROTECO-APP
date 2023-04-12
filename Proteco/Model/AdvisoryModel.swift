@@ -1,10 +1,11 @@
 // Dependencies
 import SwiftUI
 
-// MARK: - ONBOARDING DATA MODEL:
-struct Onboarding: Identifiable {
+// MARK: - ADVISORY DATA MODEL:
+struct Advisory: Identifiable {
     var id              = UUID()
     var image           : String
     var bgColor         : Color
+    var title           : String
     var description     : String
 }

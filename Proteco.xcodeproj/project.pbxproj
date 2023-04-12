@@ -29,6 +29,12 @@
 		A2C8701629C8048900407A48 /* Assistant-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A2C8701529C8048900407A48 /* Assistant-Regular.ttf */; };
 		A2D7267B29C9165D0076A25D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7267A29C9165C0076A25D /* MainView.swift */; };
 		A2D7267D29C916FA0076A25D /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7267C29C916FA0076A25D /* TabModel.swift */; };
+		A2F27D7729E7204C006CC248 /* AdvisoryScheduleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F27D7629E7204C006CC248 /* AdvisoryScheduleCardView.swift */; };
+		A2F27D7929E721BA006CC248 /* AdvisoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F27D7829E721BA006CC248 /* AdvisoryData.swift */; };
+		A2F27D7C29E72225006CC248 /* AdvisoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F27D7B29E72225006CC248 /* AdvisoryModel.swift */; };
+		A2F27D7F29E72EA8006CC248 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F27D7E29E72EA8006CC248 /* TextView.swift */; };
+		A2F27D8129E74738006CC248 /* AdvisoryAdminCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F27D8029E74738006CC248 /* AdvisoryAdminCardView.swift */; };
+		A2F27D8329E75822006CC248 /* AdvisoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F27D8229E75822006CC248 /* AdvisoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,12 @@
 		A2C8701729C8063D00407A48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A2D7267A29C9165C0076A25D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A2D7267C29C916FA0076A25D /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		A2F27D7629E7204C006CC248 /* AdvisoryScheduleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisoryScheduleCardView.swift; sourceTree = "<group>"; };
+		A2F27D7829E721BA006CC248 /* AdvisoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisoryData.swift; sourceTree = "<group>"; };
+		A2F27D7B29E72225006CC248 /* AdvisoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisoryModel.swift; sourceTree = "<group>"; };
+		A2F27D7E29E72EA8006CC248 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		A2F27D8029E74738006CC248 /* AdvisoryAdminCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisoryAdminCardView.swift; sourceTree = "<group>"; };
+		A2F27D8229E75822006CC248 /* AdvisoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvisoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 				A2C86FFC29C76B4300407A48 /* Model */,
 				A2C86FFB29C76B3C00407A48 /* View */,
 				A2C86FFA29C76B1B00407A48 /* App */,
+				A2F27D7D29E72E7F006CC248 /* Utility */,
 				A2B267FE29C4E48800349F37 /* Assets.xcassets */,
 			);
 			path = Proteco;
@@ -115,6 +128,7 @@
 				A2B267FC29C4E48500349F37 /* ContentView.swift */,
 				A2D7267A29C9165C0076A25D /* MainView.swift */,
 				A20A632129DB5C490065CBF3 /* OnboardingView.swift */,
+				A2F27D8229E75822006CC248 /* AdvisoryView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -124,8 +138,9 @@
 			children = (
 				A207BF1F29C9607800429371 /* ShadowView.swift */,
 				A23FCC7C29CE130900231D5A /* CustomButtonsView.swift */,
-				A20A631F29DB57F30065CBF3 /* TitlesView.swift */,
 				A20A632329DB5ED30065CBF3 /* OnboardingCardView.swift */,
+				A2F27D7629E7204C006CC248 /* AdvisoryScheduleCardView.swift */,
+				A2F27D8029E74738006CC248 /* AdvisoryAdminCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +151,7 @@
 				A2D7267C29C916FA0076A25D /* TabModel.swift */,
 				A2A7D32E29D36438006C61BB /* CustomButtonModel.swift */,
 				A20A631D29DB54140065CBF3 /* OnboardingModel.swift */,
+				A2F27D7B29E72225006CC248 /* AdvisoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				A20A631B29DB53930065CBF3 /* OnboardingData.swift */,
+				A2F27D7829E721BA006CC248 /* AdvisoryData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -160,6 +177,15 @@
 				A20A632529DB7A9C0065CBF3 /* MontserratAlternates-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A2F27D7D29E72E7F006CC248 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A20A631F29DB57F30065CBF3 /* TitlesView.swift */,
+				A2F27D7E29E72EA8006CC248 /* TextView.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,12 +277,18 @@
 				A20A632429DB5ED30065CBF3 /* OnboardingCardView.swift in Sources */,
 				A20A632029DB57F30065CBF3 /* TitlesView.swift in Sources */,
 				A2D7267B29C9165D0076A25D /* MainView.swift in Sources */,
+				A2F27D7929E721BA006CC248 /* AdvisoryData.swift in Sources */,
+				A2F27D8129E74738006CC248 /* AdvisoryAdminCardView.swift in Sources */,
 				A20A631C29DB53930065CBF3 /* OnboardingData.swift in Sources */,
 				A20A631E29DB54140065CBF3 /* OnboardingModel.swift in Sources */,
+				A2F27D7F29E72EA8006CC248 /* TextView.swift in Sources */,
 				A23FCC7D29CE130900231D5A /* CustomButtonsView.swift in Sources */,
 				A2B267FB29C4E48500349F37 /* ProtecoApp.swift in Sources */,
 				A207BF2029C9607800429371 /* ShadowView.swift in Sources */,
+				A2F27D7C29E72225006CC248 /* AdvisoryModel.swift in Sources */,
+				A2F27D8329E75822006CC248 /* AdvisoryView.swift in Sources */,
 				A20A632229DB5C490065CBF3 /* OnboardingView.swift in Sources */,
+				A2F27D7729E7204C006CC248 /* AdvisoryScheduleCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

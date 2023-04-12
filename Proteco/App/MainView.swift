@@ -18,7 +18,7 @@ struct MainView: View {
         let tabViews = Group {
             switch selectedTab {
             case .advices:
-                Text("Asesorias")
+                AdvisoryView()
             case .courses:
                 Text("Cursos")
             case .home:
