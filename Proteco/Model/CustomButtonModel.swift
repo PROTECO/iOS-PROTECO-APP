@@ -1,7 +1,7 @@
 // Dependencies
 import SwiftUI
 
-struct CustomButton {
+struct CustomButtonModel {
     var backgroundColor : Color?
     var foregroundColor : Color
     var customBgColor   : Color?
@@ -20,75 +20,72 @@ enum TypesButtonStyle {
     case blue
     case pink
     case unfilled
+    case unfilledDark
     
-    var model: CustomButton {
+    var model: CustomButtonModel {
         switch self {
         case .main:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_main"),
                 foregroundColor: Color("color_light_1")
             )
         case .mainV2:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_main_2"),
                 foregroundColor: Color("color_secondary_2")
             )
         case .secondary:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_secondary"),
                 foregroundColor: Color("color_dark_1")
             )
         case .tertiary:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_dark_1"),
                 foregroundColor: Color("color_light_1")
             )
-            
         case .transparent:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_light_1"),
                 foregroundColor: Color("color_dark_1")
             )
-            
         case .danger:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_dangerous"),
                 foregroundColor: Color("color_secondary")
             )
-            
         case .success:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_success"),
                 foregroundColor: Color("color_dark_1")
             )
-            
         case .disable:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_light_2"),
                 foregroundColor: Color("color_main")
             )
-            
         case .dark:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_dark_1"),
                 foregroundColor: Color("color_secondary")
             )
-            
         case .blue:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_bg_darkblue"),
                 foregroundColor: Color("color_secondary")
             )
-            
         case .pink:
-            return CustomButton(
+            return CustomButtonModel(
                 backgroundColor: Color("color_bg_pink"),
                 foregroundColor: Color("color_secondary")
             )
-            
         case .unfilled:
-            return CustomButton(
+            return CustomButtonModel(
                 foregroundColor: Color("color_dark_1")
+            )
+        case .unfilledDark:
+            return CustomButtonModel(
+                foregroundColor: Color("color_dark")
             )
         }
     }
