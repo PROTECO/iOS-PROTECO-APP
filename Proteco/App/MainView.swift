@@ -3,13 +3,21 @@ import SwiftUI
 
 class MainObservable: ObservableObject {
     // MARK: - PROPERTIES
-    @Published var showMenu: Bool = true
+    @Published var showMenu     : Bool = true
+    @Published var isShowMenu   : Bool = false
     
     // MARK: - FUNCTIONS
     func toogleShowMenu() {
         DispatchQueue.main.async {
             self.showMenu.toggle()
             print("ShowMenu: \(self.showMenu)")
+        }
+    }
+    
+    func toogleShowMenuNavBar() {
+        DispatchQueue.main.async {
+            self.isShowMenu.toggle()
+            print("ShowMenu Navbar: \(self.showMenu)")
         }
     }
 }
@@ -20,6 +28,9 @@ struct MainView: View {
     
     @State var isAnimating  : Bool      = false
     @State var selectedTab  : TabModel  = .home
+    //@State var isShowMenu   : Bool      = false
+    @State var selectedMenu : String    = "Convocatoria"
+    //@State var selectedMenu : MenuOptionModel = .home
     @State var color        : Color     = Color("color_icons")
     
     private var shadow = ShadowView(isShadow: true)
@@ -44,25 +55,31 @@ struct MainView: View {
                 Text("Cuenta")
             } //: GROUP
         } //: VIEWS
-        
+
         ZStack {
+            
             // CONTENT
             tabViews
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+
+            // SIDE MENU
+            //SideMenuView(selectedTab: $selectedMenu)
+
+            // BACKGROUNDS
+            //SideMenuControlView(mainObservable: mainObservable, selectedTab: $selectedMenu)
             
             VStack {
                 // NAVIGATION BAR
                 ZStack {
                     if (mainObservable.showMenu) {
-                        NavigationBarView()
+                        NavigationBarView(mainObservable: mainObservable)
                     }
                 } //: ZSTACK
                 .frame(width: nil, height: 90, alignment: .bottom)
-                .animation(.easeIn(duration: 0.1), value: self.mainObservable.showMenu)
                 .ignoresSafeArea()
-                
+
                 Spacer()
-                
+
                 // TAB BAR
                 ZStack  {
                     if (mainObservable.showMenu) {
@@ -85,7 +102,7 @@ struct MainView: View {
                                             .scaleEffect(selectedTab == item.tab ? 2 : 1.5)
                                             .foregroundColor(selectedTab == item.tab ? Color("color_secondary") : Color("color_icons"))
                                             .padding(.bottom, 2)
-                                        
+
                                         Text(item.text)
                                             .font(selectedTab == item.tab ? .custom("MontserratAlternates-SemiBold", size: 10) : .custom("MontserratAlternates-Regular", size: 11))
                                             .lineLimit(1)
@@ -113,6 +130,12 @@ struct MainView: View {
     }
 }
 
+// MARK: - EXTENSIONS
+extension View {
+    func getRect() -> CGRect {
+        return UIScreen.main.bounds
+    }
+}
 
 // MARK: - PREVIEW
 struct MainView_Previews: PreviewProvider {
