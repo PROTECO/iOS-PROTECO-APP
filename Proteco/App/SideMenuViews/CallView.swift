@@ -1,15 +1,18 @@
-//
-//  CallView.swift
-//  Proteco
-//
-//  Created by ReusHarper on 18/04/23.
-//
-
+// Dependencies
 import SwiftUI
 
 struct CallView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Text("Call")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(.primary)
+                .navigationTitle("Call")
+        }
     }
 }
 

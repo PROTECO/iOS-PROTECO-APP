@@ -1,20 +1,34 @@
-//
-//  DismissButtonView.swift
-//  Proteco
-//
-//  Created by ReusHarper on 21/04/23.
-//
-
+// Dependencies
 import SwiftUI
 
 struct DismissButtonView: View {
+    // MARK: - PROPERTIES
+    @Environment(\.dismiss) var dismiss
+    
+    var title   : String
+    var action  : (() -> Void)?
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(
+            action: {
+                dismiss()
+                if action != nil {
+                    action!()
+                }
+            }
+        ) {
+            HStack {
+                Image(systemName: "chevron.backward")
+                Text(title)
+            }
+        }
     }
 }
 
+// MARK: - PREVIEW
 struct DismissButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        DismissButtonView()
+        DismissButtonView(title: "Dismiss")
     }
 }

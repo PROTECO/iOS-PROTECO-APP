@@ -1,43 +1,86 @@
 // Dependencies
 import SwiftUI
 
-struct ControlView: View {
+struct SideMenuTabView: View {
     // MARK: - PROPERTIES
-    //@ObservedObject var mainObservable : MainObservable
+    @ObservedObject var mainObservable  : MainObservable
+    @Binding        var selectedTab     : String
     
-    @Binding var selectedTab: String
-    
+    var overlayView : OverlayView
+
     // MARK: - INIT
-    init(selectedTab: Binding<String>) {
-        self._selectedTab = selectedTab
+    init(mainObservable: MainObservable, selectedTab: Binding<String>) {
+        self.mainObservable = mainObservable
+        self._selectedTab   = selectedTab
+        self.overlayView    = OverlayView(mainObservable: mainObservable)
         UITabBar.appearance().isHidden = true
     }
     
     // MARK: - BODY
     var body: some View {
-        TabView(selection: $selectedTab) {
-            // VIEWS
-//            HomeView(mainObservable: <#MainObservable#>)
-//                .tag("Home")
-            
-            ContactView()
-                .tag("Contact")
-            
-            FeedbackView()
-                .tag("Feedback")
-            
-            WebSiteView()
-                .tag("Website")
-            
-            CreditsView()
-                .tag("Creditos")
+        let tabViews = Group {
+            switch selectedTab {
+            case "Home":
+                TabBarView(mainObservable: mainObservable)
+                    .tag("Home")
+            case "Call":
+                CallView()
+                    .tag("Call")
+            case "Contact":
+                ContactView()
+                    .tag("Contact")
+            case "Feedback":
+                FeedbackView()
+                    .tag("Feedback")
+            case "Website":
+                WebSiteView()
+                    .tag("Credits")
+            case "Credits":
+                CreditsView()
+                    .tag("Credits")
+            default:
+                TabBarView(mainObservable: mainObservable)
+                    .tag("Home")
+            } //: GROUP
+        } //: VIEWS
+
+        TabView {
+            // SPECIAL CASE FOR HOME TAB
+            tabViews
+                .overlay(mainObservable.isShowSideMenu ? overlayView : nil)
+                .onAppear(perform: {
+                    // ENABLED SIDE MENU
+                    mainObservable.isEnabledSideMenu = true
+                    
+                    withAnimation {
+                        mainObservable.isShowSideMenu = false
+                        mainObservable.isShowTabBar = selectedTab == "Home" ? true : false
+                    }
+                })
         }
     }
 }
 
 // MARK: - PREVIEW
-//struct ControlView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CallView()
-//    }
-//}
+struct SideMenuTabView_Previews: PreviewProvider {
+    @State static private var option: String = "Home"
+    
+    static var previews: some View {
+        SideMenuTabView(mainObservable: MainObservable(), selectedTab: $option)
+    }
+}
+
+struct PruebaView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    var body: some View {
+        NavigationView {
+            Text("PruebaView")
+                .font(.largeTitle)
+                .fontWeight(.heavy)
+                .foregroundColor(.primary)
+                .navigationTitle("PruebaView")
+        }
+    }
+}

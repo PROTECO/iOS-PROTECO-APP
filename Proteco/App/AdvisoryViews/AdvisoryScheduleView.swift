@@ -4,8 +4,11 @@ import SwiftUI
 struct AdvisoryScheduleView: View {
     // MARK: - PROPERTIES
     @ObservedObject var mainObservable : MainObservable
+    @State          var performActionOnBackGesture = false
+    @Environment(\.dismiss) var dismiss
     
-    let titleView: String = "Agendar asesorías"
+    let titleView   : String = "Agendar asesorías"
+    let titleButton : String = "Asesorias"
     
     // MARK: - BODY
     var body: some View {
@@ -18,11 +21,20 @@ struct AdvisoryScheduleView: View {
             titleView,
             displayMode: .inline
         )
+        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+            .onEnded({ _ in })
+        )
         .onAppear {
-            mainObservable.toogleShowMenu()
+            if mainObservable.isShowTabBar && !mainObservable.isShowSideMenu {
+                mainObservable.isShowTabBar.toggle()
+            }
+            mainObservable.isShowBtnSideMenu.toggle()
         }
         .onDisappear {
-            mainObservable.toogleShowMenu()
+            if !mainObservable.isShowTabBar && !mainObservable.isShowSideMenu {
+                mainObservable.isShowTabBar.toggle()
+            }
+            mainObservable.isShowBtnSideMenu.toggle()
         }
     }
     

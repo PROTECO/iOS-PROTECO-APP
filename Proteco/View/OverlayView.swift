@@ -1,20 +1,37 @@
-//
-//  OverlayView.swift
-//  Proteco
-//
-//  Created by ReusHarper on 19/04/23.
-//
-
+// Dependencies
 import SwiftUI
 
 struct OverlayView: View {
+    // MARK: - PROPERTIES
+    @ObservedObject var mainObservable : MainObservable
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Rectangle()
+            .fill(Color("color_light_1"))
+            .ignoresSafeArea(.container, edges: .vertical)
+            .onTapGesture {
+                // HIDDEN OF SIDE MENU
+                if mainObservable.isShowSideMenu {
+                    withAnimation {
+                        mainObservable.isShowSideMenu.toggle()
+                    }
+                }
+                // HIDDEN OF TAB BAR & NAV BAR
+                if !mainObservable.isShowTabBar {
+                    withAnimation {
+                        //mainObservable.isShowTabBar.toggle()
+                        mainObservable.isShowTabBar = mainObservable.selectedMenu == "Home" ? true : false
+                    }
+                }
+            }
+            .opacity(0.6)
     }
 }
 
+// MARK: - PREVIEW
 struct OverlayView_Previews: PreviewProvider {
     static var previews: some View {
-        OverlayView()
+        OverlayView(mainObservable: MainObservable())
     }
 }

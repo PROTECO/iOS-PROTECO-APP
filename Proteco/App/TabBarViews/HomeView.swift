@@ -1,18 +1,16 @@
-//
-//  HomeView.swift
-//  Proteco
-//
-//  Created by ReusHarper on 18/04/23.
-//
-
+// Dependecnies
 import SwiftUI
 
 struct HomeView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Home view")
     }
 }
 
+// MARK: - PREVIEW
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

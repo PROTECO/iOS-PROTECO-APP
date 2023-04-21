@@ -1,20 +1,19 @@
-//
-//  CustomCorner.swift
-//  Proteco
-//
-//  Created by ReusHarper on 15/04/23.
-//
-
+// Dependencies
 import SwiftUI
 
-struct CustomCorner: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct CustomCorner_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomCorner()
+struct CustomCorner: Shape {
+    // MARK: - PROPERTIES
+    var corners : UIRectCorner
+    var radius  : CGFloat
+    
+    // MARK: - FUNCTIONS
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(
+            roundedRect: rect,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+        
+        return Path(path.cgPath)
     }
 }

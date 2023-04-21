@@ -10,7 +10,7 @@ let advisoryData: [Advisory] = [
     ),
     Advisory(
         image       : "img_2",
-        bgColor     : Color("color_bg_gray"),
+        bgColor     : Color("color_bg_green"),
         title       : "Administra tus asesorías",
         description : "Revisa, inicia o cancela tus asesorías de forma rápida y sencilla en cualquier momento 🤗"
     )

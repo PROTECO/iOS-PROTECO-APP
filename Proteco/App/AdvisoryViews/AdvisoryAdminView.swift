@@ -4,37 +4,16 @@ import SwiftUI
 struct AdvisoryAdminView: View {
     // MARK: - PROPERTIES
     @ObservedObject var mainObservable : MainObservable
+    @State          var performActionOnBackGesture = false
+    @Environment(\.dismiss) var dismiss
     
-    @State private var isShowing = false
-    
-    let titleView: String = "Administración de asesorías"
+    let titleView   : String = "Administración de asesorías"
+    let titleButton : String = "Asesorias"
     
     // MARK: - BODY
     var body: some View {
         VStack {
-            Button(action: {
-                self.isShowing.toggle()
-            }) {
-                Text("Mostrar/ocultar vista")
-            }
-            if isShowing {
-                Text("¡Hola, mundo!")
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .frame(width: 200, height: 200)
-                    .background(Color.blue)
-                    .cornerRadius(20)
-                    .opacity(isShowing ? 1 : 0)
-                    .animation(.easeInOut(duration: 0.5))
-                    .onAppear {
-                        withAnimation(.easeInOut(duration: 5)) {
-                            self.isShowing = true
-                        }
-                    }
-                    .onDisappear {
-                        self.isShowing = false
-                    }
-            }
+            Text("Administrar asesorías")
         } //: VSTACK
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("color_bg_gray"))
@@ -42,11 +21,20 @@ struct AdvisoryAdminView: View {
             titleView,
             displayMode: .inline
         )
+        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+            .onEnded({ _ in })
+        )
         .onAppear {
-            mainObservable.toogleShowMenu()
+            if mainObservable.isShowTabBar && !mainObservable.isShowSideMenu {
+                mainObservable.isShowTabBar.toggle()
+            }
+            mainObservable.isShowBtnSideMenu.toggle()
         }
         .onDisappear {
-            mainObservable.toogleShowMenu()
+            if !mainObservable.isShowTabBar && !mainObservable.isShowSideMenu {
+                mainObservable.isShowTabBar.toggle()
+            }
+            mainObservable.isShowBtnSideMenu.toggle()
         }
     }
     
